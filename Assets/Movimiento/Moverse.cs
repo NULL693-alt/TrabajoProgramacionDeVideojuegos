@@ -4,6 +4,7 @@ public class Moverse : MonoBehaviour
 {
 
     [SerializeField]private float speed;
+    [SerializeField]private float jumpForce = 5f;
 
     private Rigidbody rb; 
     private float xImput;
@@ -22,7 +23,11 @@ public class Moverse : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        }
     }
 
     void FixedUpdate()

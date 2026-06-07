@@ -297,8 +297,8 @@ Transform:
   m_GameObject: {fileID: 97230959}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.6989, y: 0.2446, z: -3.1234}
-  m_LocalScale: {x: 0.5388633, y: 0.46694055, z: 0.53038543}
+  m_LocalPosition: {x: 11.7476, y: 0.2068, z: -3.1457}
+  m_LocalScale: {x: 0.44150776, y: 0.39119494, z: 0.48583305}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1797642012}
@@ -317,6 +317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Moverse
   speed: 5.86
+  jumpForce: 6.62
 --- !u!54 &97230965
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -325,7 +326,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 97230959}
   serializedVersion: 5
-  m_Mass: 1
+  m_Mass: 2
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -3479,7 +3480,7 @@ Transform:
   m_GameObject: {fileID: 1860492284}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.23571777, z: -0, w: 0.97182155}
-  m_LocalPosition: {x: 3.05, y: 0.55, z: -3.4}
+  m_LocalPosition: {x: 3.05, y: 0.581, z: -3.4}
   m_LocalScale: {x: 3.1791623, y: 0.11246333, z: 1.3240728}
   m_ConstrainProportionsScale: 0
   m_Children: []
