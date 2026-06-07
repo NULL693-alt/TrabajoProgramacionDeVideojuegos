@@ -7,6 +7,7 @@ public class Moverse : MonoBehaviour
 
     private Rigidbody rb; 
     private float xImput;
+    private float zImput;
 
     private void Awake()
     {
@@ -34,6 +35,10 @@ public class Moverse : MonoBehaviour
         xImput = Input.GetAxis("Horizontal");
         Vector3 movement = new Vector3(xImput * speed, rb.linearVelocity.y);
         rb.linearVelocity = movement;
+
+        zImput = Input.GetAxis("Vertical");
+        Vector3 movement2 = new Vector3(rb.linearVelocity.x, rb.linearVelocity.y, zImput * speed);
+        rb.linearVelocity = movement2;
         
     }
 }
