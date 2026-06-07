@@ -3,26 +3,37 @@ using UnityEngine;
 public class Moverse : MonoBehaviour
 {
 
-    private int vidas = 1;
+    [SerializeField]private float speed;
 
-    private float velocidad = 4f;
+    private Rigidbody rb; 
+    private float xImput;
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         
     }
 
-    void movimineto()
-    {
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
-
-        transform.Translate(new Vector3(h, 0, v) * velocidad * Time.deltaTime);
-    }
-
     // Update is called once per frame
     void Update()
     {
-      movimineto();   
+        
+    }
+
+    void FixedUpdate()
+    {
+        HandleMovement();
+    }
+
+    private void HandleMovement()
+    {
+        xImput = Input.GetAxis("Horizontal");
+        Vector3 movement = new Vector3(xImput * speed, rb.linearVelocity.y);
+        rb.linearVelocity = movement;
+        
     }
 }
