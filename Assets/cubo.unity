@@ -204,7 +204,7 @@ GameObject:
   - component: {fileID: 97230966}
   - component: {fileID: 97230965}
   m_Layer: 0
-  m_Name: Cube (27)
+  m_Name: Cube (27) Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -300,7 +300,8 @@ Transform:
   m_LocalPosition: {x: 11.6989, y: 0.2446, z: -3.1234}
   m_LocalScale: {x: 0.5388633, y: 0.46694055, z: 0.53038543}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1797642012}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &97230964
@@ -341,7 +342,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 72
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!136 &97230966
 CapsuleCollider:
@@ -3254,11 +3255,11 @@ Transform:
   m_GameObject: {fileID: 1797642008}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.99883974, z: -0, w: 0.04815891}
-  m_LocalPosition: {x: 11.632, y: 0.458, z: -1.081}
-  m_LocalScale: {x: 1, y: 0.83864, z: 1}
+  m_LocalPosition: {x: -0.12415069, y: 0.45701754, z: 3.8507843}
+  m_LocalScale: {x: 1.8560284, y: 1.7960317, z: 1.8851426}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 97230963}
   m_LocalEulerAnglesHint: {x: 0, y: -174.479, z: 0}
 --- !u!1 &1843155523
 GameObject:
@@ -4298,7 +4299,6 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1797642012}
   - {fileID: 325532137}
   - {fileID: 1987166352}
   - {fileID: 141782875}
