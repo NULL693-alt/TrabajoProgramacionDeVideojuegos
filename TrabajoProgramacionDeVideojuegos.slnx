@@ -1,10 +1,3 @@
-<<<<<<< HEAD
 ﻿<Solution>
   <Project Path="Assembly-CSharp.csproj" />
 </Solution>
-=======
-﻿<Solution>
-  <Project Path="Assembly-CSharp-Editor.csproj" />
-  <Project Path="Assembly-CSharp.csproj" />
-</Solution>
->>>>>>> 7cab1964453db7d680b43fa5ccd02ec4a23b727d
