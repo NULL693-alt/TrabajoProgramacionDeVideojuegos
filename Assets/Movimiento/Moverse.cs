@@ -3,10 +3,11 @@ using UnityEngine;
 public class Moverse : MonoBehaviour
 {
 
-    [SerializeField]private float speed;
-    [SerializeField]private float jumpForce = 5f;
+    [SerializeField] private float speed;
+    [SerializeField] private float jumpForce = 5f;
+    [SerializeField] private float deathHeight = -10f;
 
-    private Rigidbody rb; 
+    private Rigidbody rb;
     private float xImput;
     private float zImput;
 
@@ -28,6 +29,11 @@ public class Moverse : MonoBehaviour
             rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
+
+        if (transform.position.y < deathHeight)
+        {
+            Die();
+        }
     }
 
     void FixedUpdate()
@@ -45,5 +51,11 @@ public class Moverse : MonoBehaviour
         Vector3 movement2 = new Vector3(rb.linearVelocity.x, rb.linearVelocity.y, zImput * speed);
         rb.linearVelocity = movement2;
         
+    }
+
+    private void Die()
+    {
+        Debug.Log("Jugador muerto por caída");
+        Destroy(gameObject);
     }
 }
